@@ -72,20 +72,3 @@ app.put('/:id', (req, res) =>{
 });
 
 app.listen(3000, () => console.log("works!"));
-
-//test sin usos
-/*var query = connection.query('SELECT * FROM peliculas', function(error, result, fields){
-    if(error){
-       throw error;
-    }else{
-       var resultado = result;
-       if(resultado.length > 0){
-        console.log(resultado);
-        }else{
-        console.log('No hay registros activos');
-        }
-    }
- });
-app.get("/", async(req, res) => {
-
-})*/

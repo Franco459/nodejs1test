@@ -32,14 +32,14 @@ app.get("/comentarios/:id", async(req,res) => {
         content: content 
     });
 })
+//crearnuevo
 app.post("/comentarios", async(req, res) => {
     var id = uuid();
     const commit = req.body.commit;
-
     if (!commit){
         return res.sendStatus(400);
+        console.log(id);
     }
-    console.log(id);
     await fs.mkdir("data/comentarios", {recursive: true});
     await fs.writeFile(`data/comentarios/${id}.txt`, commit);
     res.status(201).json({
